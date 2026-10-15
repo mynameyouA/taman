@@ -1,0 +1,76 @@
+{
+  "name": "Tâm An AI - Không Gian Tâm Thức & Chiêm Bốc Minh Triết",
+  "short_name": "Tâm An AI",
+  "description": "Nền tảng chiêm bốc Liên Sinh Độn Giáp, Tarot 78 lá, giải mộng Carl Jung, thiền định Solfeggio và đàm đạo cùng Thầy Sinh 3D.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay", "minimal-ui"],
+  "background_color": "#03050c",
+  "theme_color": "#070d1e",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Liên Sinh Độn Giáp",
+      "short_name": "Gieo Quẻ",
+      "description": "Khởi quẻ chiêm bốc Liên Hoa Độn Pháp 384 bản quái kiện",
+      "url": "/lien-sinh-don-giap",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Tarot 78 Lá 3D",
+      "short_name": "Rút Bài",
+      "description": "Bốc bài Tarot Rider-Waite ngẫu nhiên 3D",
+      "url": "/tarot",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Phòng Thiền Sóng Não",
+      "short_name": "Tọa Thiền",
+      "description": "Tĩnh tâm cùng tần số Solfeggio 432Hz & 528Hz",
+      "url": "/meditation",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Lá Số Tử Vi Hoàng Gia",
+      "short_name": "Tử Vi 12 Cung",
+      "description": "Lập lá số 12 Cung & Tứ Trụ Bát Tự, xuất Sớ Khởi Tâm 4K",
+      "url": "/tu-vi",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Đàm Đạo Thầy Sinh",
+      "short_name": "Hỏi Thầy",
+      "description": "Trò chuyện khai tuệ cùng Thầy Sinh 3D",
+      "url": "/chat",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["lifestyle", "utilities", "spirituality", "education"]
+}
