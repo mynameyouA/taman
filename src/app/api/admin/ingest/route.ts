@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+let prisma: any = null;
+function getPrisma() {
+  if (!prisma) {
+    try {
+      const { PrismaClient } = require('@prisma/client');
+      prisma = new PrismaClient();
+    } catch (e) {
+      console.warn('Prisma client not initialized:', e);
+    }
+  }
+  return prisma;
+}
 
 function generateMockEmbedding(): number[] {
   return Array.from({ length: 1536 }, () => Math.random() * 2 - 1);
@@ -32,8 +41,11 @@ export async function POST(req: Request) {
       const id = crypto.randomUUID();
       const type = 'document_chunk';
       const now = new Date();
-      // Use $executeRawUnsafe as requested and assume PostgreSQL with pgvector extension enabled.
-      await prisma.$executeRawUnsafe(
+      const db = getPrisma();
+      if (!db) {
+        throw new Error('Database connection not available');
+      }
+      await db.$executeRawUnsafe(
         'INSERT INTO "KnowledgeItem" (id, type, content, embedding, updated_at) VALUES ($1, $2, $3, $4::vector, $5)',
         id,
         type,
