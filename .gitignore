@@ -8,3 +8,4 @@ out/
 coverage/
 # OS specific
 Thumbs.db
+temp-prisma/
